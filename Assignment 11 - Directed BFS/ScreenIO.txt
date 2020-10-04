@@ -1,0 +1,145 @@
+Authors: Kenneth Casimiro, Mason Godrey
+Class Information: CS1D #14490 Mon/Wed 5PM - 7:20PM
+
+Summary: This program does a BFS search of flights to 12 cities with weighted DIRECTED edges.
+         Using a graph with a adjacency list structure. BFS starts at Atlanta
+         Program then checks the connectivity and determines if its strong or
+         or not by doing a DFS search and then reverse its edges and DFS     
+         search again and checks if all 12 cities were visited from the two.
+
+------------------------------------------------------
+Part B - BFS with a digraph
+------------------------------------------------------
+ADDING TO GRAPH/VERTICES 
+******************************************************
+Seattle
+San Francisco
+Los Angeles
+Dallas
+Houston
+Miami
+Atlanta
+New York
+Boston
+Chicago
+Denver
+Kansas City
+
+Performing a BFS starting at Atlanta
+******************************************************
+1: Atlanta
+2: Miami
+3: Houston
+4: Dallas
+5: Kansas City
+6: Los Angeles
+7: Chicago
+8: Denver
+9: New York
+10: Boston
+11: Seattle
+12: San Francisco
+
+Total Distance (Discovery Edge): 10757
+
+BFS DISCOVERY EDGES
+******************************************************
+(Dallas, Los Angeles)
+(Dallas, Kansas City)
+(Houston, Dallas)
+(Miami, Houston)
+(Atlanta, Miami)
+(Chicago, Boston)
+(Chicago, Seattle)
+(Denver, San Francisco)
+(Kansas City, Chicago)
+(Kansas City, Denver)
+(Kansas City, New York)
+
+BFS BACK EDGES
+******************************************************
+(Seattle, Denver)
+(San Francisco, Los Angeles)
+(Dallas, Atlanta)
+(Houston, Atlanta)
+(New York, Atlanta)
+(Boston, New York)
+(Kansas City, Atlanta)
+
+BFS CROSS EDGES
+******************************************************
+(Seattle, San Francisco)
+(Los Angeles, Denver)
+(New York, Chicago)
+(Denver, Chicago)
+(Kansas City, Los Angeles)
+
+------------------------------------------------------
+PART C - Strong Connectivity
+------------------------------------------------------
+ADDING TO GRAPH/VERTICES 
+****************************
+CITY: Seattle - HAS BEEN ADDED.
+CITY: San Francisco - HAS BEEN ADDED.
+CITY: Los Angeles - HAS BEEN ADDED.
+CITY: Dallas - HAS BEEN ADDED.
+CITY: Houston - HAS BEEN ADDED.
+CITY: Miami - HAS BEEN ADDED.
+CITY: Atlanta - HAS BEEN ADDED.
+CITY: New York - HAS BEEN ADDED.
+CITY: Boston - HAS BEEN ADDED.
+CITY: Chicago - HAS BEEN ADDED.
+CITY: Denver - HAS BEEN ADDED.
+CITY: Kansas City - HAS BEEN ADDED.
+
+DFS - STARTING AT ATLANTA
+****************************
+Atlanta
+Miami
+Houston
+Dallas
+Kansas City
+Chicago
+Boston
+New York
+Seattle
+San Francisco
+Los Angeles
+Denver
+
+REVERSE DFS - STARTING AT ATLANTA
+****************************
+ADDING TO GRAPH/VERTICES 
+****************************
+CITY: Seattle - HAS BEEN ADDED.
+CITY: San Francisco - HAS BEEN ADDED.
+CITY: Los Angeles - HAS BEEN ADDED.
+CITY: Dallas - HAS BEEN ADDED.
+CITY: Houston - HAS BEEN ADDED.
+CITY: Miami - HAS BEEN ADDED.
+CITY: Atlanta - HAS BEEN ADDED.
+CITY: New York - HAS BEEN ADDED.
+CITY: Boston - HAS BEEN ADDED.
+CITY: Chicago - HAS BEEN ADDED.
+CITY: Denver - HAS BEEN ADDED.
+CITY: Kansas City - HAS BEEN ADDED.
+
+DFS - STARTING AT ATLANTA
+****************************
+Atlanta
+Dallas
+Houston
+Miami
+Kansas City
+New York
+Boston
+Chicago
+Denver
+Los Angeles
+San Francisco
+Seattle
+
+TOTAL VISITED (DFS): 12
+TOTAL VISITED (REVERSE DFS): 12
+Graph is strongly connected: When the edge directions are
+reversed the DFS can still visit all vertices.

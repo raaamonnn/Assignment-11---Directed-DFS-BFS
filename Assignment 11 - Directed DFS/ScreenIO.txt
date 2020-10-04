@@ -1,0 +1,68 @@
+Authors: Kenneth Casimiro, Thea Knasiak
+Class Information: CS1D #14490 Mon/Wed 5PM - 7:20PM
+Summary: This program does a DFS search of flights to 12 cities with weighted DIRECTED edges.
+         Using a graph with a adjacency list structure.
+
+PART A
+
+ADDING TO GRAPH/VERTICES 
+****************************
+CITY: Seattle - HAS BEEN ADDED.
+CITY: San Francisco - HAS BEEN ADDED.
+CITY: Los Angeles - HAS BEEN ADDED.
+CITY: Dallas - HAS BEEN ADDED.
+CITY: Houston - HAS BEEN ADDED.
+CITY: Miami - HAS BEEN ADDED.
+CITY: Atlanta - HAS BEEN ADDED.
+CITY: New York - HAS BEEN ADDED.
+CITY: Boston - HAS BEEN ADDED.
+CITY: Chicago - HAS BEEN ADDED.
+CITY: Denver - HAS BEEN ADDED.
+CITY: Kansas City - HAS BEEN ADDED.
+
+DFS - STARTING AT ATLANTA
+****************************
+Atlanta
+Miami
+Houston
+Dallas
+Kansas City
+Chicago
+Boston
+New York
+Seattle
+San Francisco
+Los Angeles
+Denver
+
+
+DFS DISCOVERY EDGES
+****************************
+(Atlanta, Miami)
+(Miami, Houston)
+(Houston, Dallas)
+(Dallas, Kansas City)
+(Kansas City, Chicago)
+(Chicago, Boston)
+(Chicago, Seattle)
+(Boston, New York)
+(Seattle, San Francisco)
+(San Francisco, Los Angeles)
+(Los Angeles, Denver)
+
+DFS BACK EDGES
+****************************
+(Houston, Atlanta)
+(Dallas, Los Angeles)
+(Dallas, Atlanta)
+(Kansas City, Denver)
+(Kansas City, Los Angeles)
+(Kansas City, Atlanta)
+(Kansas City, New York)
+(New York, Atlanta)
+(New York, Chicago)
+(Seattle, Denver)
+(Denver, San Francisco)
+(Denver, Chicago)
+
+Total Distance Traveled by Discovery Edges: 8613
